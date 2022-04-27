@@ -32,7 +32,7 @@ const scopes = process.env.SCOPES || "spark:people_read"; // supported scopes ar
 // Compute redirect URI where your integration is waiting for Webex cloud to redirect and send the authorization code
 // unless provided via the REDIRECT_URI variable
 const port = process.env.PORT || 8080;
-let redirectURI = process.env.REDIRECT_URI
+let redirectURI = process.env.REDIRECT_URI || "https://chatbot-flaskapp.herokuapp.com/webhook"
 if (!redirectURI) {
    // Glitch hosting
    if (process.env.PROJECT_DOMAIN) {
